@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>画像説明</title>
+
+<style>
+.image-box {
+    position: relative;
+    display: inline-block;
+}
+
+.image-box img {
+    width: 250px; /* サムネイルサイズ */
+    cursor: pointer;
+}
+
+/* 説明ボックス */
+.tooltip {
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translateX(-50%);
+    width: 350px;
+    padding: 15px;
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    display: none;
+    z-index: 100;
+}
+
+/* PC：マウスを乗せたら表示 */
+.image-box:hover .tooltip {
+    display: block;
+}
+
+/* スマホ：タップ・長押しで表示 */
+.image-box:active .tooltip,
+.image-box:focus-within .tooltip {
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="image-box" tabindex="0">
+    <img src="IMG_8184.png" alt="画像">
+    <div class="tooltip">
+        <h3>水ロリ</h3>
+        <p>
+            なんかみんな≒水≒ロリらしい<br>
+            つまりみんな≒ロリらしい<br>
+            世界全員ロリですね
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
